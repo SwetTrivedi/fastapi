@@ -4,23 +4,23 @@ app=FastAPI()
 
 # Single queryparameter
 
-@app.get("/product")
-async def product(category:str):
-    return{"status":"OK","category":category}
+# @app.get("/product")
+# async def product(category:str):
+#     return{"status":"OK","category":category}
 
 
 # Multiple Queryparameter 
 
-@app.get("/product")
-async def product(category:str,limit:int):
-    return{"status":"OK","category":category,"limit":limit}
+# @app.get("/product")
+# async def product(category:str,limit:int):
+#     return{"status":"OK","category":category,"limit":limit}
 
 
 # Optional Query Parameter 
 
-@app.get("/product")
-async def product(limit:int,category:str | None=None):
-    return{"status":"OK","category":category,"limit":limit}
+# @app.get("/product")
+# async def product(limit:int,category:str | None=None):
+#     return{"status":"OK","category":category,"limit":limit}
 
 # Path parameter and querparameter
 
