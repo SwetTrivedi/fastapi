@@ -41,14 +41,14 @@ app=FastAPI()
 ####################   Includeing and Excluding Concept   ##########################
 
 
-products_db={
-    "1":{"id":"1","name":"Laptop","price":"19999.0","stock":10,"is_active":True},
-    "2":{"id":"2","name":"Laptop","price":"20999.0","stock":10,"is_active":False}
-}
-class Product(BaseModel):
-    id:int
-    name:str
-    price:float    
+# products_db={
+#     "1":{"id":"1","name":"Laptop","price":"19999.0","stock":10,"is_active":True},
+#     "2":{"id":"2","name":"Laptop","price":"20999.0","stock":10,"is_active":False}
+# }
+# class Product(BaseModel):
+#     id:int
+#     name:str
+#     price:float    
 
 #Including Specific Fields 
 

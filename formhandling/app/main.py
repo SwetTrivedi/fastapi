@@ -22,15 +22,15 @@ async def get_form():
         </body>
     </html>
     """
-# @app.post("/login/")
-# async def login(username:Annotated[str,Form()],password:Annotated[str,Form()]):
-#     return{"username":username,"password_length":len(password)}
+@app.post("/login/")
+async def login(username:Annotated[str,Form()],password:Annotated[str,Form()]):
+    return{"username":username,"password_length":len(password)}
 
 
 # form with validation 
-@app.post("/login/")
-async def login(
-    username:Annotated[str,Form(min_length=3)],
-    password:Annotated[str,Form(min_length=3,max_length=7)]
-    ):
-    return{"username":username,"password_length":len(password)}
+# @app.post("/login/")
+# async def login(
+#     username:Annotated[str,Form(min_length=3)],
+#     password:Annotated[str,Form(min_length=3,max_length=7)]
+#     ):
+#     return{"username":username,"password_length":len(password)}
