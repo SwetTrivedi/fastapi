@@ -40,21 +40,26 @@ async def createproduct(new_product:dict):
 
 
 @app.put("/product/{product_id}")
-def update_product(product_id:int,new_update_product:dict):
-    for index,product in enumerate(PRODUCTS):
-        if product["id"]==product_id:
-            PRODUCTS[index]=new_update_product
-            return{"status":"upadted","product_id":product_id,"new update product":new_update_product}
-        
-
-
+def update_product_put(product_id: int, new_update_product: dict):
+    for index, product in enumerate(PRODUCTS):
+        if product["id"] == product_id:
+            PRODUCTS[index] = new_update_product
+            return {
+                "status": "upadted",
+                "product_id": product_id,
+                "new update product": new_update_product,
+            }
 
 @app.patch("/product/{product_id}")
-def update_product(product_id:int,new_update_product:dict):
-    for index,product in enumerate(PRODUCTS):
-        if product["id"]==product_id:
-            PRODUCTS[index]=new_update_product
-            return{"status":"upadted","product_id":product_id,"new update product":new_update_product}
+def update_product_patch(product_id: int, new_update_product: dict):
+    for index, product in enumerate(PRODUCTS):
+        if product["id"] == product_id:
+            PRODUCTS[index].update(new_update_product)
+            return {
+                "status": "upadted",
+                "product_id": product_id,
+                "new update product": PRODUCTS[index],
+            }
         
 
 
