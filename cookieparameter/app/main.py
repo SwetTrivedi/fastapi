@@ -1,6 +1,6 @@
 # from fastapi import FastAPI,Cookie
 # from typing import Annotated
-# from pydantic import BaseModel ,Field
+from pydantic import BaseModel ,Field
 # app=FastAPI()
 # @app.get("/products/recommendations")
 # async def get_recomendations(session_id:Annotated[str | None,Cookie()]=None):
